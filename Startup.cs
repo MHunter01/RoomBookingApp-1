@@ -32,7 +32,7 @@ namespace RoomBookingApp
             services.AddRazorPages();
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("ApplicationDbContext")));
+                    Configuration.GetConnectionString("defaultConnection")));
 
             services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
                     .AddRoles<IdentityRole>()
